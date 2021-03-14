@@ -1,0 +1,271 @@
+@font-face{
+	font-family:"titulo";
+	src:url(Fuentes/Simply-Bold.ttf)format("truetype");
+} /*para importar fuentes*/
+@font-face{
+	font-family:"cuerpo";
+	src:url(Fuentes/Comfortaa-Regular.ttf)format("truetype");
+}
+@keyframes animation {
+  from {color: white; font-size:2em;}
+  to {color: #004ba4; font-size:3em;}
+} /*para dotar de animacion, en este caso agranda el titulo*/
+body{
+	margin:0; /*espacio fuera del contenedor*/
+	padding:2%; /*espacio entre el contenido y el limite del contenedor*/
+	box-sizing: border-box; /*propiedad que quita los margenes y paddings predeterminados del navegador*/
+	display:flex; /*alinea los contenidos con la propiedad especificada debajo*/
+	justify-content:space-around; /*alinea los elementos horizontalmente dejando el mismo espacio entremedio*/
+	background-color:#bcf1e1d6; /*color de fondo*/
+	font-family:"cuerpo"; /*uso de fuente*/
+}
+
+/*Contenedores*/
+
+.main{
+	width:1150px; /*ancho*/
+}
+.center{
+	overflow:hidden; /*hace que el contenedor incluya todo el contenido que tiene dentro, y si sobra, lo oculta*/
+}
+.lateral{
+	width:18%;
+	float:left; /*alinea el elemento a la izquierda*/
+	padding:2%;
+}
+.content{
+	width:68%;
+	float:right; /*alinea el elemento a la derecha*/
+	margin:0 4%;
+	text-align:justify; /*justifica el texto*/
+}
+.hidden{
+	display:none; /*oculta el contenido*/
+}
+
+/*Titulo*/
+
+h1,.menu{
+	text-align:center; /*alinea el texto en el centro*/
+}
+h1{
+	margin:2.5% 0 0 1.5%;
+	text-transform: uppercase; /*transforma el texto a mayúsculas*/
+	font-family:"titulo";
+	font-size:3em; /*tamaño de la fuente, em es relativo al tamaño original*/
+	color:#004ba4;	
+	animation-name:animation; /*uso de la animacion*/
+	animation-duration:2s; /*duracion de la animacion*/
+	box-shadow:2px 2px 5px 4px #0B5872; /*sombra, tamaño y color de la sombra*/
+	padding:2%;
+	width:93%;
+}
+.content h2{
+	margin-top:5%;
+}
+.content > h2:first-child{
+	margin-top:0;
+}
+
+/*Imagen*/
+
+#worldmap{
+	width:100%;
+	margin-top:8%;
+}
+
+/*Lateral izquierdo*/
+
+.lateral{
+	background-color:#03c88f99;
+}
+.center li{
+	margin-bottom:3%;
+}
+.lateral ul{
+	list-style-type:none; /*elimina los puntos de las listas*/
+	margin-left:-17%;
+}
+a{
+	text-decoration: none; /*elimina el subrayado de los enlaces*/
+}
+.lateral a{
+	color:black; /*color de la fuente*/
+}
+
+.lateral a:hover,.lateral a:focus{ /*hover, especifica estilos que se deben aplicar al pasar el cursor por encima, 
+	focus cuando el elemnto tiene el foco, como al tabular*/
+	color:#4281f3;
+	transition:.3s ease-out; /*segundos que durará la aplicación del efecto*/
+	font-size:1.03em;
+}
+.lateral h4{
+	color:#0B5872;
+}
+.hlateral{
+	margin:0 0 6%;
+}
+.external{
+	margin:15% 0 6%;
+}
+
+/*Login*/
+
+.lateral h3{
+	margin:30% 0 15%;
+	color:#0B5872;
+}
+.lateral fieldset{
+	padding:6%;
+}
+.lateral label{
+	display:block;
+	margin-bottom:5%;
+}
+#lpassword{
+	margin-top:8%;
+}
+#usuario,#pass{
+	width:90%;
+	padding:3%;
+}
+.lateral input{
+	font-family:"cuerpo";
+	font-size:1.01em;
+}
+.lateral input[type="submit"]{ /*especifica el input que queremos usar por el contenido de su atributo*/
+	padding:3.6%;
+    width: 35%;
+    margin: 10% 2% 20% 0;
+    float: right;
+    border:1px solid #4281f3; /*borde del elemento*/
+    color:#4281f3;
+    background-color:white;
+    border-radius:5px; /*redondea los bordes en el tamaño indicado*/
+    letter-spacing:1px; /*espaciado entre las letras*/
+    font-weight:bold;
+}
+.lateral input[type="submit"]:hover,.lateral input[type="submit"]:focus{
+	color:white;
+	background-color:#4281f3;
+	transition:.4s ease-out;
+	border:1px solid #02BECC;
+}
+#changelogin{
+	clear: both; /*hace que los elementos no se puedan colocar la lado y "limpia" su linea*/
+    margin-top: 12%; 
+}
+#loginindex{
+	margin-top:10%;
+}
+.login fieldset{
+	border:1px solid #4281f3;
+}
+
+/*Menu*/
+
+header{
+	overflow:hidden;
+}
+.menu{
+	margin:4% 0;
+	background-color:#03c88f99;
+	overflow:hidden;
+}
+.menu ul{
+	padding:0;
+}
+.menu li{
+	padding:1%;
+	border-radius:2px;
+	display:inline; /*visualiza los elementos en linea*/
+	margin:0 1%;
+}
+.menu a{
+	color:#0B5872;
+	font-weight:bold; /*anchura de la fuente, este caso en negrita*/
+	text-transform:uppercase;
+	font-family:"titulo";
+	letter-spacing:3px;
+	font-size:1.4em;
+}
+.menu a:hover,.menu a:focus{
+	color:#4281f3;
+	transition:.4s ease-out;
+}
+
+/*Flecha*/
+
+#flecha{
+	position:fixed; /*elemento situado fijo en esa posicion, que al desplazar la página permanece en ese lugar*/
+	bottom:40px; /*posicion desde la parte superior de la página*/
+	right:25px; /*posicion desde la izquierda de la página*/
+	width:25px;
+	height:25px;
+}
+#flecha:hover{
+	width:30px;
+	height:30px;
+	transition:.3s ease-out;
+}
+
+/*Continentes*/
+
+dt,dd,.content p,.lateral ul{
+	line-height: 37px; /*espacio entre las lineas*/
+}
+.content li{
+	line-height: 25px;
+}
+.content img{
+	width:45%;
+}
+.content dt{
+	text-decoration: underline; /*subraya el texto*/
+}
+.content .img2{
+	float:right;
+	margin:0 0 3% 3%;
+}
+.content .img3{
+	float:left;
+	margin:0 3% 3% 0;
+}
+.content h4{
+	margin-top:4%;
+}
+
+/*Footer*/
+
+footer{
+	margin-top:9%;
+	display:flex;
+	justify-content:space-between;
+	box-shadow:3px 3px 6px 2px #0b58727d;
+	padding:1%;
+}
+footer p:first-child{ /*Hace referencia al primer hijo (en este caso p) del elemento padre (en este caso footer)*/
+	float:left;
+}
+footer p:last-child{ /*Hace referencia al último hijo*/
+	float:right;
+}
+footer img{
+	width:40px;
+	height:40px;
+	opacity:0.4; /*hace el elemento transparente*/
+}
+footer img:hover,footer img:focus{
+	opacity:1;
+	transition:.6s ease-out;
+}
+footer div{
+	margin-top:0.5%;
+}
+footer img{
+	margin-right:2%;
+}
+footer div{
+	width:25%;
+	margin-left:5%;
+}
