@@ -253,7 +253,7 @@ footer p:last-child{ /*Hace referencia al último hijo*/
 footer img{
 	width:40px;
 	height:40px;
-	opacity:0.4; /*hace el elemento transparente*/
+	opacity:0.6; /*hace el elemento transparente*/
 }
 footer img:hover,footer img:focus{
 	opacity:1;
