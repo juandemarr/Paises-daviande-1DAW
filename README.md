@@ -1,5 +1,5 @@
-Proyect about info of the most beautifulls countries of all continents - 1DAW
+Proyect about info of the most beautifulls countries of all continents.
 
-HTML5 and CSS3
+HTML5 and CSS3.
 
-In => https://juandemarr.github.io/paises-daviande/
+In => https://juandemarr.github.io/Paises-daviande-1DAW/
